@@ -1,0 +1,211 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+NGO
+{% endblock %}
+{% block x %}
+  <div class="row slider">
+
+          <div class="col-sm-12 s1 p-0">
+  <!-- start slider-->
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/abc.jpg'%}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <!-- loop-->
+    {% for a in res %}
+    <div class="carousel-item">
+      <img src="/{{a.spic}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-dark">{{a.shead}}</h5>
+        <p class="text-dark">{{a.ssubject}}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- endloop-->
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  <!-- end slider-->
+
+        </div>
+
+        </div>
+<!--Start Myblog-->
+<div class="row ncategory">
+    <div class="col-sm-12 my-5">
+    <h1 class="text-center">Our <b class="text-mycolor">Blogs</b></h1>
+        <hr size="7px" width="150px" color="blue" style="margin-left:490px;">
+
+    <div class="row">
+        {% for i in data %}
+          <div class="col-sm-2 my-3">
+
+            <div class="card">
+              <img  src="/{{i.bpicture}}" class="img-card-top w-100"/>
+            <div class="card-body text-center">
+              <h5 class="card-title text-center">{{i.bname}}</h5>
+                <a href="/user/bdetail?msg={{i.id}}" class="btn btn-sm bg-mycolor">View More</a>
+
+                </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+
+        </div>
+<!--end blog-->
+
+<div class="row event my-5">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 s2">
+        <h2 class="text-center my-3">Upcoming <b class="text-mycolor">Events</b></h2>
+        <hr size="7px" width="230px" color="blue" style="margin-left:355px;">
+            <!-- Start card-->
+<div class="card mb-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'images/event1.jpg'%}" class="img-fluid rounded-start" style="min-height:130px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Environment Disaster Risk Reduction</h5>
+        <p class="card-text">Gender Equality at the center of solutions.</p>
+        <p class="card-text"><small class="text-muted"> Date <i class="fa-solid fa-calendar"></i>
+         : 13/03/2023
+        </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="card mb-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img style="height:155px;width:400px;" src="{% static 'images/event2.png'%}" class="img-fluid rounded-start" style="min-height:130px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Youth Activist Space</h5>
+        <p class="card-text">Join the Kick-Off event of the Youth Preparation series for NGO BetterLifeOrg</p>
+        <p class="card-text"><small class="text-muted"> Date <i class="fa-solid fa-calendar"></i>
+         : 28/08/2022
+        </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="card mb-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img style="height:155px;" src="{% static 'images/event.jpg'%}" class="img-fluid rounded-start" style="min-height:130px;" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Global Education</h5>
+        <p class="card-text">It's our world, let us take action together</p>
+        <p class="card-text"><small class="text-muted"> Date <i class="fa-solid fa-calendar"></i>
+         : 28/08/2022
+        </small></p>
+      </div>
+    </div>
+  </div>
+            </div>
+        </div>
+    <div class="col-sm-1"></div>
+            <!-- end card-->
+</div>
+    </div>
+    <div class="row my-5">
+      <div class="col-sm-1"></div>--
+      <div class="col-sm-10">
+          <h1 class="text-center">Our Promises To <b class="text-mycolor">Children</b></h1>
+          <hr size="7px" width="370px" color="blue" style="margin-left:270px;">
+          <p class="text-center">We promises to imporve the lives of the most vulnerable <br/>
+              children and strengtghen communities so that children can reach their full potential.
+              We ensure that</p>
+          <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2">
+                  <div class="card cheight">
+  <img style="height:120px;" src="{% static 'images/ngo14.jpg' %}" class="card-img-top rpic" alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are Educated</p>
+  </div>
+</div>
+              </div>
+ <div class="col-sm-2">
+                  <div class="card cheight">
+  <img style="height:120px;" src="{% static 'images/ngo12.jpg' %}" class="card-img-top rpic" alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are Healthy and well-nourished</p>
+  </div>
+</div>
+              </div>
+               <div class="col-sm-2">
+                  <div class="card cheight">
+  <img style="height:120px;" src="{% static 'images/ngo13.jpg' %}" class="card-img-top rpic" alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are aware of their basic rights.</p>
+  </div>
+</div>
+              </div>
+               <div class="col-sm-2">
+                  <div class="card cheight">
+  <img style="height:120px;" src="{% static 'images/ngo7.jpg' %}" class="card-img-top rpic" alt="...">
+  <div class="card-body">
+    <p class="card-text">Children participate in their own development.</p>
+  </div>
+</div>
+              </div>
+               <div class="col-sm-2">
+                  <div class="card cheight">
+  <img style="height:120px;" src="{% static 'images/ngo11.jpg' %}" class="card-img-top rpic" alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are valued cared for </p>
+  </div>
+</div>
+              </div>
+
+
+              <div class="col-sm-1"></div>
+          </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+<div class="row">
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-11">
+        <h2 class="text-center"> Our <b class="text-mycolor">Gallery</b> </h2>
+        <hr size="7px" width="170px" color="blue" style="margin-left:420px;">
+        {% for a in img %}
+        <img src="/{{a.gpic}}" height="200px" width="200px" class="my-5 mx-3"/>
+        {% endfor %}
+    </div>
+ //   <div class="col-sm-1"></div>
+</div>
+
+    <div class="row inews"></div>
+    <div class="row vnews"></div>
+    <div class="row city"></div>
+{% endblock %}

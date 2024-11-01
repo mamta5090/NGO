@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block title %}
+LOGIN
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center">LOG <b class="text-mycolor">IN
+ </b>
+</div><br><br><br><br>
+<form>
+<b style="margin-left:300px;">Email</b><input name="email" required type="text" class="form-control" style="height:50px;width:400px;margin-left:300px;"/><br><br>
+<b style="margin-left:300px;">Password</b><input name="password" required type="text" class="form-control" style="height:50px;width:400px;margin-left:300px;"/><br><br>
+<input type="button" value="LOGIN" class="form-control bg-mycolor" style="height:50px;width:400px;margin-left:300px;"/>
+</form>
+{% endblock %}

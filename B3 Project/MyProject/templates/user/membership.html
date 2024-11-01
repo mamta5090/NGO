@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% block title %}
+MEMBERSHIP
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center">MEMBER<b class="text-mycolor">SHIP
+<i class="fa-solid fa-users"></i> </b>
+    <hr size="7px" width="250px" color="blue" style="margin-left:440px;">
+</div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="row">`
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 frm">
+            <b>Name</b><input name="name" required type="text" class="form-control" placeholder="Name..." style="width:400px;height:50px;"/>
+            </div>
+            <div>
+            <b style="margin-left:110px;">Pincode</b><input name="pcode" required type="number" class="form-control" placeholder="Pincode..." style="width:400px;height:50px;margin-left:110px;"/>
+            </div><br><br><br><br>
+            <div>
+            <b style="margin-left:110px;">City</b><select style="height:40px;width:200px;" name="city">
+                {% for x in ct %}
+                <option>{{x.ncity}}</option>
+                {% endfor %}
+                                          </select>
+            </div><br><br>
+             <div>
+            <b style="margin-left:110px;">E-mail</b><input name="email" required type="text" class="form-control" placeholder="Email..." style="width:400px;height:50px;margin-left:110px;"/>
+            </div>
+             <div>
+            <b style="margin-left:110px;">Mobile Number</b><input name="mob" required type="text" class="form-control" placeholder="Mobile..." style="width:400px;height:50px;margin-left:110px;"/>
+            </div>
+            <div>
+            <b style="margin-left:110px;">Bank Account</b><input name="acc" required type="text" class="form-control" placeholder="Bank Account" style="width:400px;height:50px;margin-left:110px;"/>
+            </div>
+            <div>
+            <b style="margin-left:110px;">Company Address</b><textarea name="paddress" required class="form-control" placeholder="Company Address..." style="width:400px;height:50px;margin-left:110px;"></textarea>
+               </div>
+             <div>
+            <b style="margin-left:110px;">Address</b><textarea name="caddress" required class="form-control" placeholder="Address..." style="width:400px;height:50px;margin-left:110px;"></textarea>
+               </div><br><br><br><br>
+               <input name="ppic" type="file" class="form-control" input type="file" class="form-control"  style="width:400px;height:50px;margin-left:120px;"/>
+            <input type="submit" value="Save" class="form-control bg-mycolor" style="width:400px;height:50px;margin-left:120px;"/>
+
+
+        </div>
+    </div>
+    </form>
+    <div class="col-sm-5"></div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

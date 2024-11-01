@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Our Causes
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block x %}
+<h1 class="text-center">Our <b class="text-mycolor">Causes</b></h1>
+<hr size="7px" width="250px" color="blue" style="margin-left:440px;">
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-6">
+<div class="card" >
+  <img style="height:300px;" src="{% static 'images/donate2.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        <h1>Food For <b class="text-mycolor">Hungry</b></h1>
+        The world is hungry, but the emptiness goes far beyond the table.
+People hunger for opportunity, starve for resources, and have been stripped of value. These injustices keep us up at night.</p>
+  </div>
+</div>
+            </div>
+            <div class="col-sm-6">
+<div class="card" >
+  <img src="{% static 'images/shelter.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        <h1>Shelters For <b class="text-mycolor">Refugees</b></h1>
+        The Rohingya people are being driven from their homeland in Myanmar because of violence —
+
+More than 647,000 have streamed across the border into the neighboring nation Bangladesh in South Asia.
+</p>
+  </div>
+</div>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-sm-6">
+<div class="card" >
+  <img style="height:300px;" src="{% static 'images/gift.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        <h1>Gifts For <b class="text-mycolor">Orphans</b></h1>
+        The world is hungry, but the emptiness goes far beyond the table.
+People hunger for opportunity, starve for resources, and have been stripped of value. These injustices keep us up at night.</p>
+  </div>
+</div>
+            </div>
+            <div class="col-sm-6">
+<div class="card" >
+  <img src="{% static 'images/education.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">
+        <h1>Educations For <b class="text-mycolor">Childrens</b></h1>
+        The Rohingya people are being driven from their homeland in Myanmar because of violence —
+
+More than 647,000 have streamed across the border into the neighboring nation Bangladesh in South Asia.
+</p>
+  </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}
+</body>
+</html>

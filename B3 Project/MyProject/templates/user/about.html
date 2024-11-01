@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">About <b class="text-mycolor">Us
+<i class="fa-regular fa-address-card"></i> </b>
+    <hr size="7px" width="180px" color="blue" style="margin-left:475px; margin-bottom:10px;">
+</div>
+<div class="row my-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 img-thumbnail" style="margin:0px 40px;">
+        <img style="width:500px;" src="{% static 'images/ngo3.jpg' %}"/>
+    </div>
+    <div class="col-sm-5 text-center">
+        <h1>Better<b class="text-mycolor">LIFE</b>Org</h1>
+        What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<h1 class="text-center">Our <b class="text-mycolor">Volunteers</b></h1>
+<hr size="7px" width="250px" color="blue" style="margin-left:440px;">
+ <div class="row my-5">
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+  <img style="height:190px;" src="{% static 'images/man1.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+        </div>
+             <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/man2.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+        </div>
+             <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/man3.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+        </div>
+    </div>
+{% endblock %}

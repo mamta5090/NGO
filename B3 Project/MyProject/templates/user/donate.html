@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block title %}
+DONATE
+{% endblock %}
+{% block x %}
+<div class="fs-2 text-center">DO<b class="text-mycolor">NATE
+<i class="fa-solid fa-hand-holding-medical"></i> </b>
+    <hr size="7px" width="210px" color="blue" style="margin-left:460px;">
+
+</div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="row">`
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 frm">
+            <b>Amount Value</b><input name="ammt" required type="text" class="form-control " placeholder="Ammount Value...." style="width:400px;height:50px;"/>
+            </div><br/><br/>
+            <div>
+            <b style="margin-left:110px;">First Name</b><input name="fname" required type="text" class="form-control" placeholder="First Name...." style="width:400px;height:50px;margin-left:110px;"/>
+            </div><br/><br/>
+            <div>
+            <b style="margin-left:110px;">Last Name</b><input name="lname" required type="text" class="form-control" placeholder="Last Name...." style="width:400px;height:50px; margin-left:110px;"/>
+            </div><br/><br/>
+             <div>
+            <b style="margin-left:110px;">E-mail</b><input name="email" required type="text" class="form-control" placeholder="Email...." style="width:400px;height:50px; margin-left:110px;"/>
+            </div><br/><br/>
+             <div>
+             <b style="margin-left:110px;">Mobile No.</b><input name="mob" required type="text" class="form-control" placeholder="Phone no...." style="width:400px;height:50px; margin-left:110px;"/>
+            </div><br/><br/><br/><br/>
+            <div>
+            <b style="margin-left:110px;">Country</b><select name="country" style="height:40px;width:200px;">
+                {%for x in cnt%}
+                <option>{{x.ncountry}}</option>
+                {% endfor %}
+            </select>
+            </div><br/><br/>
+             <div>
+             <b style="margin-left:110px;">Address</b><textarea name="address" required class="form-control" placeholder="Address...." style="width:400px;height:50px; margin-left:110px;"></textarea>
+               </div><br/><br/><br/><br/>
+             <div>
+            <b style="margin-left:110px;">State</b><select style="height:40px;width:200px;" name="state">
+                 {% for x in st %}
+                 <option>{{x.nstate}}</option>
+                 {% endfor %}
+             </select>
+            </div><br/><br/>
+            <div>
+            <b style="margin-left:110px;">Pincode</b><input name="pcode" required type="number" class="form-control" placeholder="Pincode..." style="width:400px;height:50px; margin-left:110px;"/>
+            </div><br/><br/>
+            <div>
+            <b style="margin-left:110px;">Occupation</b><input name="occn" required type="text" class="form-control" placeholder="Occupation...." style="width:400px;height:50px; margin-left:110px;"/>
+            </div><br/><br/><br/><br/>
+            <input type="submit" value="Save" class="form-control bg-mycolor" style="width:400px;height:50px; margin-left:120px;"/>
+              </div>
+</form>
+
+
+
+    </div>
+    <div class="col-sm-5"></div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}
