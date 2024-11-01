@@ -5,3 +5,4 @@ Our key focus areas include:
 Education: Providing access to quality education and vocational training for children and adults.
 Health: Promoting health awareness and providing essential medical services in underserved areas.
 Environment: Implementing sustainable practices to protect our planet and promote biodiversity.</div>
+<div>Use ptyhon manage.py runserver to run project Django</div>
